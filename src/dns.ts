@@ -196,13 +196,13 @@ function buildDnsConfig({ mode, ipv6Enabled, fakeIpFilter }: BuildDnsConfigInput
         ipv6: ipv6Enabled,
         "prefer-h3": true,
         "enhanced-mode": mode,
-        nameserver: ["system", "223.5.5.5", "119.29.29.29", "180.184.1.1"],
+        "default-nameserver": ["223.5.5.5", "119.29.29.29"],
+        nameserver: ["https://doh.pub/dns-query", "https://dns.alidns.com/dns-query"],
         fallback: [
             "quic://dns0.eu",
             "https://dns.cloudflare.com/dns-query",
             "https://dns.sb/dns-query",
-            "tcp://208.67.222.222",
-            "tcp://8.26.56.2",
+            "https://dns.quad9.net/dns-query",
         ],
     };
 

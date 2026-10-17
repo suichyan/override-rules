@@ -4,7 +4,7 @@ https://github.com/powerfullz/override-rules
 
 支持的传入参数：
 - grouptype: 地区代理组类型（0=select 手动选择, 1=url-test 自动测速, 2=load-balance 负载均衡，默认 0）
-  - 向后兼容：若未传 grouptype 但传了 loadbalance，则 loadbalance=true 映射为 grouptype=2，loadbalance=false 映射为 grouptype=1
+- 向后兼容：若未传 grouptype 但传了 loadbalance，则 loadbalance=true 映射为 grouptype=2，loadbalance=false 映射为 grouptype=1
 - landing: auto-detected from nodes with `dialer-proxy` field; no user parameter needed
 - ipv6: 启用 IPv6 支持（默认 false）
 - tun: 启用 TUN 模式（默认 false）
