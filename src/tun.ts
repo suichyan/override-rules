@@ -15,6 +15,7 @@ export function buildTunConfig(tunEnabled: boolean, tailscale: boolean): TunConf
         enable: tunEnabled,
         stack: "mixed",
         device: "mihomo",
+        "auto-route": true,
         "route-exclude-address": [
             !tailscale ? "100.64.0.0/10" : null,
             !tailscale ? "fd7a:115c:a1e0::/48" : null,

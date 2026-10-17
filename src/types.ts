@@ -95,6 +95,7 @@ export interface TunConfig {
     enable: boolean;
     stack: "gvisor" | "system" | "mixed";
     device: string;
+    "auto-route": boolean;
     "route-exclude-address": string[];
     "dns-hijack": string[];
     mtu: number;
@@ -179,6 +180,8 @@ export interface ClashConfig {
     "log-level"?: "info" | "warning" | "error" | "debug" | "silent";
     "geodata-loader"?: "standard" | "memconservative";
     "external-controller"?: string;
+    "external-ui-url"?: string;
+    "external-ui"?: string;
     "disable-keep-alive"?: boolean;
     profile?: ClashProfile;
 }
