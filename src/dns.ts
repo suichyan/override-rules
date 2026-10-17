@@ -6,8 +6,8 @@ import type { DnsConfig, DnsPolicyValue, SnifferConfig } from "./types";
  */
 const FAKE_IP_FILTER = [
     "geosite:connectivity-check",
-    "Mijia Cloud",
-    "dig.io.mi.com",
+    "+.mijia.com",
+    "dlg.io.mi.com",
     "localhost.ptlogin2.qq.com",
     "*.icloud.com",
     "*.stun.*.*",
@@ -111,7 +111,7 @@ export const snifferConfig: SnifferConfig = {
     "override-destination": false,
     enable: true,
     "force-dns-mapping": true,
-    "skip-domain": ["Mijia Cloud", "dlg.io.mi.com", "+.push.apple.com"],
+    "skip-domain": ["+.mijia.com", "dlg.io.mi.com", "+.push.apple.com"],
 };
 
 /**
