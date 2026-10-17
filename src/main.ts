@@ -136,6 +136,9 @@ function main(config: ClashConfig): ClashConfig {
             "log-level": "warning",
             "geodata-loader": "standard",
             "external-controller": "127.0.0.1:9090",
+            "external-ui-url":
+                "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+            "external-ui": "ui",
             "disable-keep-alive": !keepAliveEnabled,
             profile: { "store-selected": true },
         }),
