@@ -13,7 +13,7 @@ import { isNotNull } from "./utils";
 export function buildTunConfig(tunEnabled: boolean, tailscale: boolean): TunConfig {
     return {
         enable: tunEnabled,
-        stack: "gvisor",
+        stack: "mixed",
         device: "mihomo",
         "route-exclude-address": [
             !tailscale ? "100.64.0.0/10" : null,
