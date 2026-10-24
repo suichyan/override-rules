@@ -93,9 +93,10 @@ export interface SnifferConfig {
 
 export interface TunConfig {
     enable: boolean;
-    stack: "gvisor" | "system" | "mixed";
+    stack: "gvisor" | "system" | "mixed" | "mips";
     device: string;
     "auto-route": boolean;
+    "strict-route": boolean;
     "route-exclude-address": string[];
     "dns-hijack": string[];
     mtu: number;

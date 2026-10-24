@@ -159,6 +159,8 @@ flowchart TD
 
 - 始终保留上游 `hosts`；
 - 在生成 DNS 配置后，合并上游的 `nameserver-policy`、`proxy-server-nameserver-policy` 和 `fake-ip-filter`；
+- 普通查询使用国内 DoH，代理节点域名使用独立的 DoH 解析器，并通过 `fallback-filter` 按 GeoIP
+  和保留地址判断是否切换到 fallback；
 - 脚本生成的 DNS 核心设置（如增强模式、IPv6 开关和默认 DNS 列表）保持优先级。
 
 这样既能维持脚本的统一 DNS 行为，也能保留订阅提供方针对特定域名的策略。
