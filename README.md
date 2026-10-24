@@ -54,8 +54,6 @@
 
 > **向后兼容**：旧的 `loadbalance` 参数仍然可用。当 `grouptype` 未指定时，`loadbalance=true` 等价于 `grouptype=2`，`loadbalance=false` 等价于 `grouptype=1`。
 
-BT/P2P 流量默认直连：规则会将 GeoSite `category-p2p` 域名，以及常见 BT 客户端（qBittorrent、Transmission、aria2、Deluge、uTorrent、BitComet）的流量排除代理。为使进程规则在 TUN 模式下生效，生成的配置会启用 Mihomo 的 `find-process-mode: strict`。
-
 [^quic]: 默认屏蔽了 QUIC 流量防止节点 UDP 性能不佳影响上网体验，如果确信节点质量良好，建议设置为 true。
 [^regex]: 默认情况下覆写脚本会直接把节点都筛选好，如果想让内核来筛（比如，你在 Clash Party 客户端里额外添加了自建节点，想直接通过正则表达式筛选进入配置文件）那就打开吧。
 

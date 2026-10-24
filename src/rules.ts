@@ -15,8 +15,6 @@ export function buildRules(
 ): string[] {
     return [
         !quicEnabled ? `AND,((DST-PORT,443),(NETWORK,UDP)),REJECT` : null,
-        `PROCESS-NAME-REGEX,(?i)(qbittorrent|transmission|aria2|deluge|utorrent|bitcomet|bittorrent),DIRECT`,
-        `GEOSITE,category-p2p,DIRECT`,
         tailscale ? `IP-CIDR,100.64.0.0/10,${PROXY_GROUPS.TAILSCALE},no-resolve` : null,
         tailscale ? `IP-CIDR,fd7a:115c:a1e0::/48,${PROXY_GROUPS.TAILSCALE},no-resolve` : null,
         tailscale ? `DOMAIN-SUFFIX,ts.net,${PROXY_GROUPS.TAILSCALE}` : null,
