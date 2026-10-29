@@ -203,23 +203,10 @@ function buildDnsConfig({ mode, ipv6Enabled, fakeIpFilter }: BuildDnsConfigInput
             "https://doh.pub/dns-query",
             "https://dns.alidns.com/dns-query",
         ],
-        fallback: [
-            "quic://dns0.eu",
-            "https://dns.cloudflare.com/dns-query",
-            "https://dns.sb/dns-query",
-            "https://dns.quad9.net/dns-query",
-        ],
-        "fallback-filter": {
-            geoip: true,
-            "geoip-code": "CN",
-            ipcidr: ["240.0.0.0/4", "0.0.0.0/32", "127.0.0.0/8", "::/128", "::1/128"],
-        },
     };
-
     if (fakeIpFilter) {
         config["fake-ip-filter"] = fakeIpFilter;
     }
-
     return config;
 }
 

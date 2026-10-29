@@ -117,13 +117,11 @@ export interface DnsConfig {
     "fake-ip-filter-mode"?: "blacklist" | "whitelist" | "rule";
     "default-nameserver"?: string[];
     nameserver: string[];
-    fallback: string[];
     "proxy-server-nameserver"?: string[];
     "direct-nameserver"?: string[];
     "nameserver-policy"?: Record<string, DnsPolicyValue>;
     "proxy-server-nameserver-policy"?: Record<string, DnsPolicyValue>;
     "direct-nameserver-follow-policy"?: boolean;
-    "fallback-filter"?: Record<string, unknown>;
     "fake-ip-filter"?: string[];
 }
 
