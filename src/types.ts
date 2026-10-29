@@ -166,6 +166,7 @@ export interface ClashConfig {
     tun?: TunConfig;
     "geodata-mode"?: boolean;
     "geox-url"?: GeoxUrl;
+    "geo-update-interval": number;
     "mixed-port"?: number;
     "redir-port"?: number;
     "tproxy-port"?: number;
