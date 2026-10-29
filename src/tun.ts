@@ -20,6 +20,7 @@ export function buildTunConfig(
         enable: tunEnabled,
         stack: "mips",
         device: "mihomo",
+        "congestion-controller": "bbr",
         "auto-route": true,
         "route-exclude-address": [
             !tailscale ? "100.64.0.0/10" : null,

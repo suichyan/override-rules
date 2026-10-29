@@ -94,6 +94,7 @@ export interface SnifferConfig {
 export interface TunConfig {
     enable: boolean;
     stack: "gvisor" | "system" | "mixed" | "mips";
+    "congestion-controller": "cubic" | "reno" | "bbr" | "bbr3";
     device: string;
     "auto-route": boolean;
     "strict-route": boolean;
