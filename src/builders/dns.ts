@@ -175,14 +175,6 @@ function buildDnsConfig({ mode, ipv6Enabled, fakeIpFilter }: BuildDnsConfigInput
             "https://doh.pub/dns-query",
             "https://dns.alidns.com/dns-query",
         ],
-        "nameserver-policy": {
-            "geosite:cn,private": ["https://doh.pub/dns-query", "https://dns.alidns.com/dns-query"],
-            "geosite:geolocation-!cn": [
-                "https://dns.cloudflare.com/dns-query",
-                "https://dns.sb/dns-query",
-                "quic://dns0.eu",
-            ],
-        },
     };
     if (fakeIpFilter) {
         config["fake-ip-filter"] = fakeIpFilter;
