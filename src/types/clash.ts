@@ -23,6 +23,7 @@ export interface SnifferConfig {
 export interface TunConfig {
     enable: boolean;
     stack: "mips" | "gvisor" | "system" | "mixed";
+    "congestion-controller": "bbr" | "bbr3" | "cubic" | "reno";
     device: string;
     "route-exclude-address": string[];
     "dns-hijack": string[];
@@ -44,7 +45,7 @@ export interface DnsConfig {
     "fake-ip-filter-mode"?: "blacklist" | "whitelist" | "rule";
     "default-nameserver"?: string[];
     nameserver: string[];
-    fallback: string[];
+    fallback?: string[];
     "proxy-server-nameserver"?: string[];
     "direct-nameserver"?: string[];
     "nameserver-policy"?: Record<string, DnsPolicyValue>;
@@ -107,7 +108,11 @@ export interface ClashConfig {
     "find-process-mode"?: "off" | "strict" | "always";
     "log-level"?: "info" | "warning" | "error" | "debug" | "silent";
     "geodata-loader"?: "standard" | "memconservative";
+    "geo-auto-update"?: boolean;
+    "geo-update-interval"?: number;
     "external-controller"?: string;
+    "external-ui-url"?: string;
+    "external-ui"?: string;
     "disable-keep-alive"?: boolean;
     profile?: ClashProfile;
 }

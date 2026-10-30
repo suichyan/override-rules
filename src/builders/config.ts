@@ -64,6 +64,8 @@ export function assembleConfig(
         }),
         tun: buildTunConfig(flags.tunEnabled, nodes.hasTailscale),
         "geodata-mode": true,
+        "geo-auto-update": true,
+        "geo-update-interval": 24,
         "geox-url": geoxUrl,
     };
 }

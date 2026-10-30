@@ -18,6 +18,7 @@ export function buildTunConfig(tunEnabled: boolean, hasTailscale: boolean): TunC
     return {
         enable: tunEnabled,
         stack: "mips",
+        "congestion-controller": "bbr",
         device: "mihomo",
         "route-exclude-address": [
             !hasTailscale ? "100.64.0.0/10" : null,
